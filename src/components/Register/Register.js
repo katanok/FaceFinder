@@ -25,6 +25,7 @@ class Register extends React.Component {
   onRegister = () => {
     fetch(process.env.API_URL, {
       method: 'post',
+      mode: 'cors',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         email: this.state.email, 
