@@ -23,7 +23,7 @@ class Register extends React.Component {
   }
 
   onRegister = () => {
-    fetch(process.env.API_URL, {
+    fetch('https://facefinder-api.onrender.com/', {
       method: 'post',
       mode: 'cors',
       headers: {'Content-Type': 'application/json'},
