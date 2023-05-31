@@ -20,6 +20,7 @@ class Signin extends React.Component {
   onSubmitSignIn = () => {
     fetch(process.env.API_URL+'/signin', {
       method: 'post',
+      mode: 'cors',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         email: this.state.signInEmail, 
