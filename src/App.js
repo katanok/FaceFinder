@@ -72,7 +72,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageURL: this.state.input});
-    fetch('http://localhost:3001/imageurl', {
+    fetch(process.env.API_URL+'/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -90,7 +90,7 @@ class App extends Component {
   }
 
   updateEntryCount = () => {
-    fetch('http://localhost:3001/image', {
+    fetch(process.env.API_URL+'/image', {
         method: 'put',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
