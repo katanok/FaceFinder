@@ -72,7 +72,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageURL: this.state.input});
-    fetch(process.env.API_URL+'/imageurl', {
+    fetch('https://facefinder-api.onrender.com/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -90,7 +90,7 @@ class App extends Component {
   }
 
   updateEntryCount = () => {
-    fetch(process.env.API_URL+'/image', {
+    fetch('https://facefinder-api.onrender.com/image', {
         method: 'put',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
